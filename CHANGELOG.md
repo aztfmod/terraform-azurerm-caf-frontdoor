@@ -1,0 +1,7 @@
+## v1.0 (Febraury 2020)
+
+FEATURES: 
+
+IMPROVEMENTS:
+
+BUGS:

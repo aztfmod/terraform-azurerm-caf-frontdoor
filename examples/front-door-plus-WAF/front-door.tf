@@ -8,8 +8,8 @@ module "rg_caftest" {
 }
 
 module "front-door" {
-  source = "../../../front-door"
-  #version = "0.x.y"
+  source = "aztfmod/caf-frontdoor/azurerm"
+  version = "1.0.2002"
 
   front-door-rg         = module.rg_caftest.names.test
   location              = local.location

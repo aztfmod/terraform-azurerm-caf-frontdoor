@@ -1,6 +1,5 @@
 front-door-object = {
   name          = "<Name for Front Door>"
-  name          = "caftest-afd-mwg"
   friendly_name = "CAF Test for Azure Front Door" 
   enforce_backend_pools_certificate_name_check = false
   load_balancer_enabled                        = true   
@@ -81,8 +80,7 @@ front-door-object = {
   frontend_endpoint = {
     fe1 = {
       name                              = "exampleFrontendEndpoint1"
-      #host_name                         = "<Name for Front Door>.azurefd.net"
-      host_name                         = "caftest-afd-mwg.azurefd.net"
+      host_name                         = "<Name for Front Door>.azurefd.net"
       session_affinity_enabled          = false 
       session_affinity_ttl_seconds      = 0     
       custom_https_provisioning_enabled = false

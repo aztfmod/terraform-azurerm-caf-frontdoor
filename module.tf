@@ -82,6 +82,7 @@ resource "azurerm_frontdoor" "front-door" {
       dynamic "custom_https_configuration" {
         for_each = frontend_endpoint.value.custom_https_provisioning_enabled == true ? [frontend_endpoint.value.custom_https_configuration] : []
         content {
+          certificate_source                         = custom_https_configuration.value.certificate_source 
           azure_key_vault_certificate_vault_id       = custom_https_configuration.value.azure_key_vault_certificate_vault_id
           azure_key_vault_certificate_secret_name    = custom_https_configuration.value.azure_key_vault_certificate_secret_name
           azure_key_vault_certificate_secret_version = custom_https_configuration.value.azure_key_vault_certificate_secret_version
